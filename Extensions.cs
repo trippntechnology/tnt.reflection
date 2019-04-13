@@ -85,7 +85,16 @@ namespace TNT.Reflection
 		/// <returns>Value of the property if it exists, null otherwise</returns>
 		public static T GetPropertyValue<T>(this object obj, string propertyName)
 		{
-			return (T)obj.GetType().GetProperty(propertyName)?.GetValue(obj);
+			// Find by PropertyDescriptor first so that both Name and DisplayName can be queried
+			var pd = obj.GetPropertyDescriptors(p => { return p.Name == propertyName || p.DisplayName == propertyName; }).FirstOrDefault();
+			if (pd == null)
+			{
+				return default(T);
+			}
+			else
+			{
+				return (T)obj.GetType().GetProperty(pd.Name)?.GetValue(obj);
+			}
 		}
 
 		/// <summary>
