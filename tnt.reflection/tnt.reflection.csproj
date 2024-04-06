@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Version>2.0.0</Version>
+		<Authors>Tripp'n Technology, LLC.</Authors>
+		<Copyright>Copyright 2024 $(Authors)</Copyright>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Description>TNT Reflection</Description>
+		<Company>$(Authors)</Company>
+		<IncludeSymbols>True</IncludeSymbols>
+		<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
+    <Title>TNT Reflection</Title>
+		<DebugType>embedded</DebugType>
+	</PropertyGroup>
+
+	<Target Name="DeplyNugetLocal" AfterTargets="Pack" Condition="$(Configuration) == 'Release'">
+		<Exec Command="copy $(ProjectDir)bin\$(Configuration)\$(ProjectName).$(PackageVersion).nupkg D:\NugetRepo" />
+	</Target>
+</Project>
