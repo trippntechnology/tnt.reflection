@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tnt.reflection", "tnt.reflection\tnt.reflection.csproj", "{95EA22C9-2983-4110-8543-A4711133C1C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TNT.Reflection", "tnt.reflection\TNT.Reflection.csproj", "{95EA22C9-2983-4110-8543-A4711133C1C6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTests", "NUnitTests\NUnitTests.csproj", "{1FCCB5A0-F07B-4DEC-A0DE-F27BE3C5081B}"
 EndProject

@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\tnt.reflection\tnt.reflection.csproj" />
+    <ProjectReference Include="..\tnt.reflection\TNT.Reflection.csproj" />
   </ItemGroup>
 
   <ItemGroup>
